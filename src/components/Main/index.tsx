@@ -1,5 +1,4 @@
 import { Button } from '../Button'
-import { Container, Image, Text } from './styles'
 
 export function Main() {
   function handleSayHello() {
@@ -9,8 +8,11 @@ export function Main() {
   }
 
   return (
-    <div>
-      
+    <div className="w-full h-full grid grid-cols-12">
+      <div className="col-span-3 bg-red-600">
+      </div>
+      <div className="col-span-6 bg-blue-500"></div>
+      <div className="col-span-3 bg-red-600"></div>
     </div>
   )
 }

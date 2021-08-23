@@ -5,12 +5,14 @@
   "description": "An Electron boilerplate including TypeScript, React, Jest and ESLint.",
   "main": "./.webpack/main/index.js",
   "scripts": {
-    "start": "electron-forge start",
+    "start": "npm run watch:css && electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "release": "electron-forge publish",
+    "release": "npm run build:css && electron-forge publish",
     "lint": "eslint . --ext js,ts",
-    "test": "jest"
+    "test": "jest",
+    "build:css": "postcss src/styles/tailwind.css -o src/styles/main.css",
+    "watch:css": "postcss src/styles/tailwind.css -o src/styles/main.css"
   },
   "keywords": [],
   "license": "MIT",

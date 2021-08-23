@@ -11,6 +11,5 @@ export const GlobalStyle = createGlobalStyle`
     font-family: Tahoma, Helvetica, sans-serif;
     font-size: 16px;
     color: #E1E1E6;
-    background-color: #fff;
   }
 `

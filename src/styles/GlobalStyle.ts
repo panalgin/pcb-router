@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: Tahoma, Helvetica, sans-serif;
     font-size: 16px;
-    color: #E1E1E6;
+    color: #000;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -23,5 +23,9 @@ export const GlobalStyle = createGlobalStyle`
   #root {
     height: 100%;
     width: 100%;
+  }
+
+  input, select {
+    outline: none;
   }
 `

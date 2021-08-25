@@ -1,4 +1,5 @@
 import { Button } from '../Button'
+import { ConnectionPanel } from './Nav/ConnectionPanel';
 
 export function Main() {
   function handleSayHello() {
@@ -10,6 +11,7 @@ export function Main() {
   return (
     <div className="w-full h-full grid grid-cols-12">
       <div className="col-span-3 bg-red-600">
+        <ConnectionPanel />
       </div>
       <div className="col-span-6 bg-blue-500"></div>
       <div className="col-span-3 bg-red-600"></div>

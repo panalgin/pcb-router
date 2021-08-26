@@ -1,6 +1,12 @@
-import "../ConnectionPanel/style.css";
+import '../ConnectionPanel/style.css'
 
 export function ConnectionPanel() {
+  function handleComPorts() {
+    var ports = window.Main.getComPorts();
+
+    console.log("Ports:", ports);
+  }
+
   return (
     <div id="connection-port" className="p-2 connection-panel m-2 rounded-md">
       <div className="p-1 flex flex-row justify-between">
@@ -17,7 +23,7 @@ export function ConnectionPanel() {
         </select>
       </div>
       <div className="p-1 flex flex-row justify-end">
-        <button>Connect</button>
+        <button onClick={handleComPorts}>Connect</button>
       </div>
     </div>
   )

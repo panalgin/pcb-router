@@ -1,4 +1,5 @@
 import { contextBridge, ipcRenderer } from 'electron'
+import * as poottt from "serialport"
 
 export const api = {
   /**
@@ -9,8 +10,18 @@ export const api = {
    * The function below can accessed using `window.Main.sayHello`
    */
 
-  sendMessage: (message: string) => { 
+  sendMessage: (message: string) => {
     ipcRenderer.send('message', message)
+  },
+
+  getComPorts: () => {
+    const serialPort = require('serialport')
+
+    serialPort.list().then(function (ports: string[]) {
+      ports.forEach(function (port: string) {
+        console.log('Port: ', port)
+      })
+    });
   },
 
   /**
@@ -18,7 +29,7 @@ export const api = {
    */
   on: (channel: string, callback: Function) => {
     ipcRenderer.on(channel, (_, data) => callback(data))
-  }
+  },
 }
 
 contextBridge.exposeInMainWorld('Main', api)

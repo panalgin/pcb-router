@@ -1,8 +1,9 @@
+import { ComPort } from '../../../../system/ComPort';
 import '../ConnectionPanel/style.css'
 
 export function ConnectionPanel() {
-  function handleComPorts() {
-    var ports = window.Main.getComPorts();
+  async function handleComPorts() {
+    var ports = await window.Main.getComPorts() as Array<ComPort>;
 
     console.log("Ports:", ports);
   }

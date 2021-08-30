@@ -1,4 +1,5 @@
 import { contextBridge, ipcRenderer } from 'electron';
+import SerialPort from 'serialport';
 
 export const api = {
   /**
@@ -14,9 +15,7 @@ export const api = {
   },
 
   getComPorts: async (): Promise<Array<Object>> => {
-    const serialPort = require('serialport');
-
-    return await serialPort.list().then(function (ports: Object[]) {
+    return await SerialPort.list().then(function (ports: Object[]) {
       return ports;
     });
   },

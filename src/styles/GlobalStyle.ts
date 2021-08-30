@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: Tahoma, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     color: #000;
     width: 100%;
     height: 100%;

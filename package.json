@@ -1,7 +1,7 @@
 {
   "name": "pcb-router",
   "author": "Diego Fernandes <diego.schell.f@gmail.com>",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "An Electron boilerplate including TypeScript, React, Jest and ESLint.",
   "main": "./.webpack/main/index.js",
   "scripts": {

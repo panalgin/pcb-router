@@ -39,8 +39,8 @@ async function registerListeners () {
     console.log(message)
   })
 
-  //const serialBridge = new SerialBridge();
-  //serialBridge.registerListeners();
+  const serialBridge = new SerialBridge();
+  serialBridge.registerListeners();
 }
 
 app.on('ready', createWindow)

@@ -1,4 +1,5 @@
 import { app, BrowserWindow, ipcMain } from 'electron'
+import { SerialBridge } from './Bridges/SerialBridge'
 
 let mainWindow: BrowserWindow | null
 
@@ -37,6 +38,9 @@ async function registerListeners () {
   ipcMain.on('message', (_, message) => {
     console.log(message)
   })
+
+  //const serialBridge = new SerialBridge();
+  //serialBridge.registerListeners();
 }
 
 app.on('ready', createWindow)

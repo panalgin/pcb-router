@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { SerialBridge } from '../../../../system/Bridges/SerialBridge';
 import { ComPort } from '../../../../system/ComPort';
 import '../ConnectionPanel/style.css';
 
@@ -98,7 +99,8 @@ export class ConnectionPanel extends Component<IProps, IState> {
   onConnectClicked() {
     let port = this.state.selectedPortName;
     let baudRate = this.state.selectedBaudRate;
+    
 
-    window.Serial.open(port, baudRate);
+    new SerialBridge().open(port, baudRate);
   }
 }

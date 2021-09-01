@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { SerialBridge } from '../../../../system/Bridges/SerialBridge';
+import { SerialBridge } from '../../../../SerialBridge';
 import { ComPort } from '../../../../system/ComPort';
 import '../ConnectionPanel/style.css';
 
